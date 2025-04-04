@@ -30,6 +30,7 @@
       ],
       matchPackageNames: [
         'registry.redhat.io/ubi9',
+        'versioning': 'semver',
       ],
     },
   ],
