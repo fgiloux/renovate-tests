@@ -6,12 +6,14 @@
     'helpers:pinGitHubActionDigests',
   ],
   pinDigests: true,
-  ignorePresets: [':prHourlyLimit2',],
+  ignorePresets: [
+    ':prHourlyLimit2',
+  ],
   separateMajorMinor: true,
   separateMultipleMajor: true,
   separateMinorPatch: true,
   pruneStaleBranches: true,
-  baseBranches: [
+  baseBranchPatterns: [
     'main',
   ],
   vulnerabilityAlerts: {
@@ -23,7 +25,6 @@
   stopUpdatingLabel: 'renovate/stop-updating',
   packageRules: [
     {
-      // Images that extend registry.redhat.io/ubi9
       groupName: 'base-images',
       matchFileNames: [
         'Dockerfile',
